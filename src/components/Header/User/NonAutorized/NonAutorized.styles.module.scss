@@ -1,0 +1,13 @@
+@import '../../../../assets/color.scss';
+
+.nonAuthor{
+    height: 96px;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: $white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

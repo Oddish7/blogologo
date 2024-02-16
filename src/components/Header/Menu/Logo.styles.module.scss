@@ -1,0 +1,11 @@
+@import '../../../assets/color.scss';
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96px;
+    background-color: $white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
