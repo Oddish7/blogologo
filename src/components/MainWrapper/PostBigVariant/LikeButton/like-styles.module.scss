@@ -1,0 +1,123 @@
+@import '../../../../helpers/color_variables.module.scss';
+
+.button_block{
+    display: flex;
+    align-items: center;
+
+    font-family: Barlow;
+    font-size: 16px;
+    font-weight: 700;
+    & p{
+        margin: 0;
+    }
+}
+
+.button_block:first-child{
+    margin-right: 24px;
+}
+
+:global(.dark) .button_block{
+    & p{
+        color: rgb(255, 255, 255);
+    }
+}
+
+.like_button, .dislike_button{
+    width: 36px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transition: all ease-in-out .4s;
+
+    &:hover:not(:disabled){
+        & path{
+            fill: white;
+            transition: all ease-in-out .4s;
+        }
+    }
+
+    &:disabled{
+        cursor: not-allowed;
+
+        & path{
+            fill: $dark-gray;
+        }
+    }
+}
+
+.shadow_button{
+    & path{
+        fill: $dark-gray;
+        transition: all ease-in-out .4s;
+    }
+}
+
+:global(.dark) .like_button, :global(.dark) .dislike_button{
+    & path{
+        fill: rgb(255, 255, 255);
+    }
+}
+
+.dis_change{
+    padding-top: 6px;
+    &:hover:not(:disabled){
+        background-color: $dislike-color;
+    }
+}
+
+:global(.dark) .dis_change{
+    padding-top: 6px;
+    &:hover:not(:disabled){
+        background-color: $dislike-color;
+    }
+}
+
+
+
+.like_change{
+    &:hover:not(:disabled){
+        background-color: $main-hover-color;
+    }
+}
+
+
+:global(.dark) .like_change{
+    &:hover:not(:disabled){
+        background-color: $main-hover-color;
+    }
+}
+
+
+.set_liked_post{
+    & path{
+        fill: $main-hover-color;
+    }
+}
+
+:global(.dark) .set_liked_post{
+    & path{
+        fill: $main-hover-color;
+    }
+}
+
+
+
+.set_disliked_post{
+    & path{
+        fill: $dislike-color;
+    }
+}
+
+:global(.dark) .set_disliked_post{
+    & path{
+        fill: $dislike-color;
+    }
+}

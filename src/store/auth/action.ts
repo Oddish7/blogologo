@@ -1,4 +1,4 @@
-import { isEmailValid } from "../../utils/inputValidation"
+import { isEmailValid } from "../../helpers/inputValidation"
 import { setEmailProfile } from "../profile/action"
 import { AppThunk } from "../store"
 import { AuthAction } from "./types"

@@ -1,0 +1,22 @@
+@import '../../../helpers/color_variables.module.scss';
+
+.mode_button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    width: 50%;
+    height: 80px;
+
+
+    &:disabled{
+        & path{
+            fill: $medium-gray;
+        }
+    }
+}
+
+.inner_button{
+    border: none;
+    background-color: transparent;
+}

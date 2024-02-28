@@ -1,0 +1,44 @@
+@import '../../../helpers/color_variables.module.scss';
+
+
+.navigation{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -8px;
+
+    & span{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 600;
+        color: $dark-mode-color;
+
+        cursor: pointer;
+        transition: all ease-in-out .3s;
+
+        &:hover{
+            color: $main-hover-color;
+        }
+
+        &.active{
+            color: $main-color;
+        }
+    }
+
+    & span:not(:last-child){
+        margin-right: 32px;
+    }
+}
+
+:global(.dark) .navigation span {
+    color: rgb(255, 255, 255);
+    transition: all ease-in-out .3s;
+
+        &:hover{
+            color: $main-hover-color;
+        }
+
+        &.active{
+            color: $main-hover-color;
+        }
+}

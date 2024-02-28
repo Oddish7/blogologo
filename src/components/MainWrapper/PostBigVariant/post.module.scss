@@ -1,0 +1,91 @@
+@import '../../../helpers/color_variables.module.scss';
+
+.post{
+    width: 100%;
+    max-height: 736px;
+    display: grid;
+    grid-template-columns: calc(63% - 16px) calc(37% - 16px);
+    column-gap: 32px;
+    font-family: Inter;
+    border-bottom: 1px solid $medium-gray;
+    border-radius: 15px;
+    box-shadow: rgba(14, 30, 37, 0.9) 0px 2px 4px 0px, rgba(14, 30, 37, 0.9) 0px 2px 16px 0px;
+    & a{
+        text-decoration: none;
+    }
+
+    & h4{
+        margin: 0 0 8px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $dark-gray;
+        padding: 10px 10px 0px 10px;
+    }
+
+    & h2{
+        margin: 0;
+        font-size: 32px;
+        text-transform: capitalize;
+        font-weight: 700;
+        color: $dark-mode-color;
+        max-height: 80px;
+        overflow: hidden;
+        padding: 0px 10px 0px 10px;
+
+        transition: all .3s ease-in-out ;
+
+        &:hover{
+            color: $main-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.post_image{
+    grid-column: 2/3;
+    height: 244px;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+}
+
+.body_text{
+    width: 100%;
+    max-height: 204px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $dark-gray;
+    margin: 24px 0 31px;
+    padding: 0px 10px 0px 10px;
+}
+
+.like_dis{
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+    padding: 0px 10px 0px 10px;
+
+    & .like_buttons:first-child{
+        margin-right: 24px;
+    }
+}
+
+.dop_buttons{
+    justify-content: flex-end;
+}
+
+:global(.dark) .post h2{
+    color: rgba(255, 255, 255, 1);
+
+    &:hover{
+        color: $main-color;
+        cursor: pointer;
+    }
+}

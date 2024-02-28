@@ -1,0 +1,70 @@
+@import '../../helpers/color_variables.module.scss';
+
+.buttons_style {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    column-gap: 8px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    color: $dark-mode-color;
+
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+
+    & p {
+        margin: 0;
+    }
+
+    & path {
+        transition: all .4s ease-in-out;
+    }
+
+    &:hover:not(:disabled) {
+        color: $main-hover-color;
+
+        & path {
+            fill: $main-hover-color;
+        }
+    }
+
+    &:disabled {
+        color: $dark-gray;
+        cursor: not-allowed;
+
+        & path {
+            fill: $dark-gray;
+        }
+    }
+}
+
+:global(.dark) .buttons_style{
+
+    color: rgb(255, 255, 255);
+    & path{
+        fill: rgb(255, 255, 255);
+    }
+
+    &:hover:not(:disabled) {
+        color: $main-color;
+
+        & path {
+            fill: $main-color;
+        }
+    }
+
+    &:disabled {
+        color: $dark-gray;
+        cursor: not-allowed;
+
+        & path {
+            fill: $dark-gray;
+        }
+    }
+}

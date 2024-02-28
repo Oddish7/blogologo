@@ -11,3 +11,7 @@
     justify-content: center;
     align-items: center;
 }
+
+:global(.dark) .nonAuthor {
+    background-color: rgba(97, 95, 103);
+}

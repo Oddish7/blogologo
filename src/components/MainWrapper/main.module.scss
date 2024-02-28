@@ -1,0 +1,24 @@
+.main{
+    width: 1120px;
+    // min-height: calc(100vh - 92px);
+    margin: 0 auto;
+    padding-top: 156px;
+
+    & h1{
+        font-family: Inter;
+        font-size: 56px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    grid-column: 1/3;
+}
+
+:global(.dark) .main h1{
+    color: rgb(255, 255, 255);
+}

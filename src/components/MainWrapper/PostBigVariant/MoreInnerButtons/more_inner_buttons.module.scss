@@ -1,0 +1,45 @@
+@import '../../../../helpers/color_variables.module.scss';
+.more_inner_buttons{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 10;
+    & div{
+        height: 83px;
+        width: 259px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid transparent;
+        border-bottom-color: $medium-gray;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        color: $dark-mode-color;
+
+        cursor: pointer;
+        transition: all ease-in-out .4s;
+
+        &:hover{
+            color: $main-color;
+        }
+    }
+}
+
+.more_big_post{
+    top: 40px;
+}
+
+.more_small_post{
+    right: 0;
+    top: 40px;
+}
+
+.more_middle_post{
+    right: 0;
+    bottom: -140px;
+}

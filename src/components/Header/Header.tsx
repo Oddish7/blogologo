@@ -2,7 +2,7 @@ import { Search } from "./Search/Search"
 import { SearchBtn } from "./Search/SearchBtn/SearchBtn"
 import { NonAutorized } from "./User/NonAutorized/NonAutorized"
 import { User } from "./User/User"
-import { useAuthState } from "../../store/auth/selector"
+import { useAuthState } from "../../store/auth/selectors"
 import styles from './Header.styles.module.scss'
 import { Logo } from "./Menu/Logo"
 

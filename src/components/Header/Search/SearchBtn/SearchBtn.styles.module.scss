@@ -14,3 +14,7 @@
         border-right: none;
     }
 }
+
+:global(.dark) .searchIcon {
+    background-color: rgba(97, 95, 103);
+}
