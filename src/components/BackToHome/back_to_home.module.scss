@@ -1,0 +1,13 @@
+@import '../../helpers/color_variables.module.scss';
+
+.back_to_home{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark-mode-color;
+    text-decoration: none;
+}
+
+:global(.dark) .back_to_home{
+    color: rgb(255, 255, 255)
+}

@@ -82,16 +82,6 @@
     margin-right: 24px;
 }
 
-.mark_buttons{
-    position: relative;
-    & button{
-        margin: 0;
-    }
-
-    & button:first-child{
-        margin-right: 8px;
-    }
-}
 
 :global(.dark) .small_post h3{
     color: rgba(255, 255, 255, 1);
@@ -106,6 +96,7 @@
 
 .search_results{
     grid-template-columns: 9% auto;
+    padding: 10px;
 
     & .small_post_img{
         grid-column: 1/2;

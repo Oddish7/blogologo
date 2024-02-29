@@ -4,13 +4,15 @@ import { authReducer } from "./auth/reducer"
 import { profileReducer } from "./profile/reducer"
 import { addToFavsReducer } from "./favs/reducer"
 import { likeReducer } from "./likes/reducer"
-import { moreReducer } from "./more/reducer"
 import { editPostReducer } from "./edit/reducer"
 import { imageReducer } from "./postImage/reducer"
 import { postReducer } from "./posts/reducer"
 import { addPostReducer } from "./addPost/reducer"
 import { tabReducer } from "./tabs/reducer"
 import { themeReducer } from "./theme/reducer"
+import { signUpReducer } from "./signUp/reducer"
+import { activationReducer } from "./activation/reducer"
+import { resetPasswordReducer } from "./reset_passwd/reducer"
 
 const rootReducer = combineReducers({
     search: searchReducer,
@@ -19,17 +21,20 @@ const rootReducer = combineReducers({
     favs: addToFavsReducer,
     like: likeReducer,
     edit: editPostReducer,
-    more: moreReducer,
     openPostImage: imageReducer,
     posts: postReducer,
     addPost: addPostReducer,
     tabs: tabReducer,
     theme: themeReducer,
+    resetPassword: resetPasswordReducer,
+    activation: activationReducer,
+    signUp: signUpReducer,
+
 })
 
 const store = configureStore({
     reducer: rootReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware()//add concat to use other features
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware()
 })
 
 export type AppState = ReturnType<typeof store.getState>

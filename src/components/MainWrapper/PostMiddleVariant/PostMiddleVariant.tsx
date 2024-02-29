@@ -1,11 +1,8 @@
 import styles from './post_middle.module.scss'
 import { Bookmark } from '../PostBigVariant/Bookmark/Bookmark'
-import { More } from '../PostBigVariant/More/More'
 import { Link } from 'react-router-dom'
 import { LikeDisButtonsWrapper } from '../PostBigVariant/LikeDisButtonsWrapper/LikeDisButtonsWrapper'
 import { Posts } from '../Tabs/TabContent/TabContent'
-import { MoreInnerButtons } from '../PostBigVariant/MoreInnerButtons/MoreInnerButtons'
-import { useMoreState } from '../../../store/more/selectors'
 
 type Props = {
     post: Posts
@@ -14,8 +11,6 @@ type Props = {
 
 export const PostMiddleVariant = (props: Props) => {
     const {post, openImage} = props
-    const moreState = useMoreState(post.id.toString())
-    const {more} = moreState || {}
 
     return (
         <div className={styles.middle_post} id={post.id.toString()}>
@@ -32,13 +27,8 @@ export const PostMiddleVariant = (props: Props) => {
                 </div>
                 <div>
                     <Bookmark postId={post.id.toString()}/>
-                    <More postId={post.id.toString()} title={post.title} description={post.description}/>
                 </div>
             </div>
-            {
-                more! ?
-                <MoreInnerButtons postId={post.id.toString()} typeOfPost='more_middle_post'/> : null
-            }
         </div>
     )
 }

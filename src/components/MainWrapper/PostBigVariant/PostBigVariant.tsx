@@ -1,12 +1,9 @@
 import styles from './post.module.scss'
 import { Bookmark } from './Bookmark/Bookmark'
-import { More } from './More/More'
 import { Link } from 'react-router-dom'
 import { ImageAction } from '../../../store/postImage/types'
 import { LikeDisButtonsWrapper } from './LikeDisButtonsWrapper/LikeDisButtonsWrapper'
 import { Posts } from '../Tabs/TabContent/TabContent'
-import { MoreInnerButtons } from './MoreInnerButtons/MoreInnerButtons'
-import { useMoreState } from '../../../store/more/selectors'
 
 type Props = {
     openImage: (id: number) => ImageAction
@@ -14,9 +11,6 @@ type Props = {
 }
 
 export const PostBigVariant = ({post, openImage}: Props) => {
-    const moreState = useMoreState(post.id.toString())
-    const {more} = moreState || {}
-    
     if (!post) {
         return null; 
     }    
@@ -38,11 +32,6 @@ export const PostBigVariant = ({post, openImage}: Props) => {
                 </div>
                 <div className={`${styles.like_dis} ${styles.dop_buttons}`}>
                     <Bookmark postId={post.id.toString()} />
-                    <More postId={post.id.toString()} title={post.title} description={post.description} />
-                    {
-                        more! ?
-                        <MoreInnerButtons postId={post.id.toString()} typeOfPost='more_big_post'/> : null
-                    }
                 </div>
             </>
         </div>

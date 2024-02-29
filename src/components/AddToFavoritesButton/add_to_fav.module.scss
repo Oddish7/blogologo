@@ -1,0 +1,47 @@
+@import '../../helpers/color_variables.module.scss';
+
+.add_to_fav_button{
+    width: 237px;
+    height: 56px;
+    padding: 16px 32px;
+    border-radius: 2px;
+    background-color: $light-gray;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+
+    & p{
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 600;
+        color: $dark-mode-color;
+        margin-left: 10px;
+    }
+
+    &:hover{
+        background-color: $main-hover-color;
+        & path{
+            fill: rgba(255, 255, 255, 1);
+            transition: all .2s ease-in-out ;
+        }
+
+        & p{
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+}
+
+.added_to_fav{
+    background-color: $main-hover-color;
+    & path{
+        fill: rgba(255, 255, 255, 1);
+        transition: all .2s ease-in-out ;
+    }
+
+    & p{
+        color: rgba(255, 255, 255, 1);
+    }
+}

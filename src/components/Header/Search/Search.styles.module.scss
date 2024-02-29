@@ -72,12 +72,25 @@
     color: rgba(97, 95, 103);
 }
 
+:global(.dark) input{
+    color: white;
+}
+
 :global(.dark) .search:focus-within input{
     & ~ button{
         background-color: rgba(97, 95, 103);
 
         & path{
-            fill: black;
+            fill: white;
         }
     }
+}
+
+:global(.dark) .search {
+    &:focus-within input{
+        &::placeholder{
+            color: $white;
+        }
+    }
+    
 }

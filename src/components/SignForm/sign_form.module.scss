@@ -1,0 +1,130 @@
+@import '../../helpers/color_variables.module.scss';
+
+.sign_form{
+    width: 624px;
+    border: 1px solid $medium-gray;
+    background-color: $extra-light-gray;
+    background-color: white;
+    border-radius: 20px;
+
+    box-sizing: border-box;
+    padding: 0 40px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 0 auto;
+
+    & a{
+        width: 100%;
+    }
+}
+
+:global(.dark) .sign_form{
+    border: 1px solid $dark-gray;
+    background: transparent;
+}
+
+.sign_text{
+    margin-top: 24px;
+    & p{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 500;
+        color: $dark-gray;
+        margin: 0;
+    }
+
+    & a{
+        text-decoration: none;
+        color: $main-color;
+    }
+}
+
+.primary_button{
+    width: 100%;
+    height: 56px;
+    padding: 16px 32px;
+    background-color: $main-color;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 2px;
+    margin-top: 48px;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+
+    transition: all ease-in-out .4s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $main-hover-color;
+    }
+
+    &:disabled{
+        background-color: $light-gray;
+        color: $dark-gray;
+        cursor: not-allowed;
+    }
+}
+
+:global(.dark) .sign_text{
+    & p{
+        color: rgba(255, 255, 255, 1);
+    }
+
+    & a{
+        color: $main-hover-color;
+    }
+}
+
+
+.forget_link{
+    text-align: left;
+    width: 100%;
+    margin: 16px 0 0;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark-mode-color;
+    text-decoration: none;
+    
+    text-align: left;
+}
+
+:global(.dark) .forget_link{
+    color: rgba(255, 255, 255, 1);
+}
+
+.error_fields{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    color: $dislike-color;
+
+    margin: 10px 0 0;
+    align-self: flex-start;
+}
+
+.error_field_side{
+    grid-column: 2/3;
+}
+
+
+.reset_passwd_text{
+    margin: 0;
+    width: 100%;
+    margin: 40px 0 0;
+
+    font-family: Catamaran;
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark-mode-color;
+    cursor: default;
+
+    & span{
+        font-weight: 700;
+    }
+}

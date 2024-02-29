@@ -1,0 +1,51 @@
+@import '../../helpers/color_variables.module.scss';
+
+.like_button, .dislike_button{
+    width: 88px;
+    height: 56px;
+    padding: 16px 32px;
+    border-radius: 2px;
+    border: none;
+    background-color: $light-gray;
+    cursor: pointer;
+
+    transition: all ease-in-out .2s;
+
+    & img{
+        width: 22px;
+        aspect-ratio: 1/1;
+    }
+
+}
+
+.like_button:hover{
+    background-color: $main-hover-color;
+    & path{
+        fill: white;
+        transition: all ease-in-out .2s;
+    }
+}
+
+.like_set_mark{
+    background-color: $main-hover-color;
+    & path{
+        fill: white;
+        transition: all ease-in-out .2s;
+    }
+}
+
+.dislike_button:hover{
+    background-color: $dislike-color;
+    & path{
+        fill: white;
+        transition: all ease-in-out .2s;
+    }
+}
+
+.dislike_set_mark{
+    background-color: $dislike-color;
+    & path{
+        fill: white;
+        transition: all ease-in-out .4s;
+    }
+}

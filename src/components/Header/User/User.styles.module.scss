@@ -1,0 +1,43 @@
+@import '../../../helpers/color_variables.module.scss';
+
+.fullBlock{
+    background-color: white;
+
+    display: flex;
+    padding: 18px 32px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    cursor: default;
+
+    &_child{
+        font-family: Inter;
+        font-weight: 600;
+        color: black;
+        font-size: 16px;
+
+        &:first-child{
+            margin-right: 16px;
+            width: 48px;
+            aspect-ratio: 1/1;
+            color: white;
+
+            background-color: $main-hover-color;
+            border-radius: 2px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+:global(.dark) .fullBlock {
+    background-color: rgba(97, 95, 103);
+
+    &_child{
+        color: white;
+    }
+}

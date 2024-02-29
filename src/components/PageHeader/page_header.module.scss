@@ -1,0 +1,14 @@
+@import '../../helpers/color_variables.module.scss';
+
+.page_header{
+    font-family: Inter;
+    font-size: 56px;
+    font-weight: 700;
+    color: $dark-mode-color;
+    margin: 32px 0 72px;
+}
+
+:global(.dark) .page_header{
+    color: white;
+}
+

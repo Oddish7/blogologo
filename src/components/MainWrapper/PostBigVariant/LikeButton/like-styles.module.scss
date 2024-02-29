@@ -24,23 +24,24 @@
 
 .like_button, .dislike_button{
     width: 36px;
-    border-radius: 50%;
+    border-radius: 40%;
     aspect-ratio: 1/1;
     padding: 0;
     border: none;
     background-color: transparent;
+    margin-right: 3px;
 
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 
-    transition: all ease-in-out .4s;
+    transition: all ease-in-out .2s;
 
     &:hover:not(:disabled){
         & path{
             fill: white;
-            transition: all ease-in-out .4s;
+            transition: all ease-in-out .2s;
         }
     }
 
@@ -56,7 +57,7 @@
 .shadow_button{
     & path{
         fill: $dark-gray;
-        transition: all ease-in-out .4s;
+        transition: all ease-in-out .2s;
     }
 }
 
